@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: white;
+    color: black;
+    font-size: 15px;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+    color: #262626;
+}
+ul{
+    list-style-type: none;
+}
+.container{
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+/* styling the navigation */
+.main-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 20px 0;
+    font-size: 13px;
+}
+.main-nav ul{
+    display: flex;
+}
+.main-nav ul li{
+    padding: 0 10px;
+}
+/* lower line &hover effect below line */
+.main-nav ul li a:hover{
+    border-bottom: 2px solid #262626;
+}
+/* padding below line hover */
+.main-nav ul li a{
+    padding-bottom: 2px;
+}
+.main-nav .logo{
+    width: 110px;
+}
+.main-nav ul.main-menu{
+    flex: 1;
+    margin-left: 20px;
+}
+/* menu button */
+.menu-btn{
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 2;
+    display: none;
+
+}
+/* shop now button */
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    background: #262626;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+/* light effect after hovering over btn */
+.btn:hover{
+    opacity: 0.9;
+}
+/* styling utility dark class of the carbon area */
+.dark{
+    color: white;
+
+}
+/* styling the carbon button  */
+.dark .btn{
+    background: #f4f4f4;
+    color: #333;
+}
+/* showcase area for background */
+.showcase{
+    /* cover 100% of the area it occupies */
+    width: 100%;
+    height: 400px;
+    background: url('./img/slide1.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+/* styling the text-area in the showcase */
+.showcase h2, .showcase p{
+    margin-bottom: 10px;
+}
+/* adding some space btn the btn and the text area */
+.showcase .btn{
+    margin-top: 20px;
+}
+/* Home cards section */
+.home-cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 15px;
+    margin-bottom: 40px;
+}
+/* styling imgs so they remain positioned in 100% of the showcase area plus some-space below images */
+.home-cards img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/*styling h3 header  */
+.home-cards h3{
+    margin-bottom: 5px;
+}
+/* styling the learn more links */
+.home-cards a{
+    display: inline-block;
+    padding-top: 10px;
+    color: #0067b8;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/* hover effect on chevron icon  */
+.home-cards a:hover i{
+    margin-left: 10px;
+}
+/* styling xbox area background */
+.xbox{
+    width: 100%;
+    height: 350px;
+    background: url('./img/xbox.png') no-repeat center center/cover;
+    margin-bottom: 20px;
+}
+/* styling the entire content within the xbox area */
+.xbox .content{
+    width: 40%;
+    padding: 50px 0 0 30px;
+}
+/* styling xbox paragraph and carbon paragraph*/
+.xbox p, .carbon p{
+    margin: 10px 0 20px;
+}
+/* carbon section */
+.carbon{
+    width: 100%;
+    height: 350px;
+    background: url('./img/carbon.jpg') no-repeat center center/cover;
+}
+/* positioning carbon content area */
+.carbon .content{
+    width: 55%;
+    padding: 100px 0 0 30px;
+}
+/*  styling follow section*/
+.follow{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 30px 0 30px;
+}
+/* styling the sm icons and p element */
+.follow * {
+    margin-right: 10px;
+}
+/* styling links area and contents */
+.links{
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+}
+/* styling inner links content */
+.links-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 10px;
+    display: grid;
+    align-items: flex-start;
+    justify-content: center;
+}
+/* styling the indivual links inside */
+.links li{
+    line-height: 2.5;
+}
+/*stling  footer */
+.footer{
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+}
+/* styling inner contents of footer */
+.footer-inner{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* styling all divs in footer */
+.footer div{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+/* styling icon in footer */
+.footer div i {
+    margin-right: 10px;
+}
+/* styling ul area of footer */
+.footer ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* styling li elements of footer */
+.footer li{
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+/* responsive design for screens not more than 700px */
+@media(max-width: 700px){
+    /* enabling the menu-btn to show when being viewed in these screen sizes */
+    /* adds padding to right menu and icon since they are congested */
+    .main-nav ul.right-menu{
+        margin-right: 50px;
+    }
+    .menu-btn{
+        display: block;
+    }
+    /* enabling hover feature on menu btn */
+    .menu-btn:hover{
+        opacity: 0.5;
+    }
+    /* adjusting position of main menu and styling */
+    .main-nav ul.main-menu{
+        display: block;
+        /* this removes it out of the normal documents flow */
+        position: absolute;
+        top:0;
+        left: 0;
+        background: #f2f2f2;
+        width: 50%;
+        height: 100%;
+        /* pushes the doc upto screen margin */
+        transform: translateX(-500px );
+        border-right: rgb(56, 44, 44) 1px solid;
+        opacity: 0.9;
+        padding: 30px;  
+         /*effect once pressed  */
+        transition: transform 0.5s ease-in-out;
+    }
+    /* adding styling to side menu contents and lower border*/
+    .main-nav ul.main-menu li{
+        padding: 10px;
+        border-bottom: #ccc solid 1px;
+        font-size: 14px;
+    }
+    /* removing last border on last li in menu */
+    .main-nav ul.main-menu li:last-child{
+        border-bottom: 0;
+    }
+
+    .main-nav ul.main-menu.show{
+        transform: translateX(-20px);
+    }
+    /* adjusting responsiveness around cards section */
+    .home-cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+    /* x box content section */
+    .xbox .content p{
+        display: none;
+    }
+    /* adding space btwn button and xbox h2 header */
+    .xbox .content h2{
+        margin-bottom: 20px;
+    }
+    /* adjusting the view of carbon width content for smaller screen sizes */
+    .carbon .content{
+        width: 85%;
+    }
+    /* adjusting view in link contents */
+    .links .links-inner{
+        grid-template-columns: repeat(2,1fr);
+    }
+    /* media query fro screen sizes not more than 500px */
+    .home-cards{
+        grid-template-columns: 1fr;
+    }
+
+    /* resizing view around small screens around links area */
+    .links .links-inner{
+        grid-template-columns: 1fr;
+    }
+    .links .links-inner ul{
+        margin-bottom: 20px;
+    }
+
+}
